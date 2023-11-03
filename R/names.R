@@ -48,6 +48,22 @@ setMethod("names<-", signature(x="SpatRaster"),
 	value
 }
 
+.raster_dataset_names_check <- function(x, value, index, validate) {
+  value <- enc2utf8(as.character(value))
+  if (!all(index == 1:length(x))) {
+    n <- names(x)
+    n[index] <- value
+    value <- n
+  }
+  if (length(value) != length(x)) {
+    error("names<-", "incorrect number of names")
+  }
+  if (validate) {
+    value <- make.names(value, unique = TRUE)
+  }
+  value
+}
+
 .vector_names_check <- function(x, value, index, validate) {
 	value <- enc2utf8(as.character(value))
 	if (!all(index == 1:ncol(x))) {
@@ -63,6 +79,7 @@ setMethod("names<-", signature(x="SpatRaster"),
 	}
 	value
 }
+
 
 setMethod("set.names", signature(x="SpatRaster"),
 	function(x, value, index=1:nlyr(x), validate=FALSE)  {
@@ -121,7 +138,7 @@ setMethod("names<-", signature(x="SpatRasterDataset"),
 
 setMethod("set.names", signature(x="SpatRasterDataset"),
 	function(x, value, index=1:length(x), validate=FALSE)  {
-		value <- .raster_names_check(x, value, index, validate)
+		value <- .raster_dataset_names_check(x, value, index, validate)
 		x@cpp$names <- value
 		invisible(TRUE)
 	}
