@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-44</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,7 +102,7 @@
           <code><a href="adjacent.html">adjacent(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="adjacent.html">adjacent(<i>&lt;SpatVector&gt;</i>)</a></code>
 
         </dt>
-        <dd>Adjacent cells</dd>
+        <dd>Adjacent cells or polygons</dd>
       </dl><dl><dt>
 
           <code><a href="aggregate.html">aggregate(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="aggregate.html">aggregate(<i>&lt;SpatVector&gt;</i>)</a></code>
@@ -207,7 +207,7 @@
         <dd>Bar plot of a SpatRaster</dd>
       </dl><dl><dt>
 
-          <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;data.frame&gt;</i>)</a></code>
+          <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;data.frame&gt;</i>)</a></code> <code><a href="bestMatch.html">bestMatch(<i>&lt;SpatRaster&gt;</i>,<i>&lt;matrix&gt;</i>)</a></code>
 
         </dt>
         <dd>bestMatch</dd>
@@ -297,7 +297,7 @@
         <dd>Query by clicking on a map</dd>
       </dl><dl><dt>
 
-          <code><a href="coerce.html">as.vector(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.matrix(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.array(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.vector(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="coerce.html">as.matrix(<i>&lt;SpatExtent&gt;</i>)</a></code>
+          <code><a href="coerce.html">as.vector(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.matrix(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.array(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="coerce.html">as.array(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="coerce.html">as.vector(<i>&lt;SpatExtent&gt;</i>)</a></code> <code><a href="coerce.html">as.matrix(<i>&lt;SpatExtent&gt;</i>)</a></code>
 
         </dt>
         <dd>Coercion to vector, matrix or array</dd>
@@ -345,10 +345,10 @@
         <dd>Contour plot</dd>
       </dl><dl><dt>
 
-          <code><a href="convhull.html">convHull(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="convhull.html">minRect(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="convhull.html">minCircle(<i>&lt;SpatVector&gt;</i>)</a></code>
+          <code><a href="convhull.html">hull(<i>&lt;SpatVector&gt;</i>)</a></code>
 
         </dt>
-        <dd>Convex hull, minimal bounding rotated rectangle, and minimal bounding circle</dd>
+        <dd>Convex, concave, rectangular and circular hulls</dd>
       </dl><dl><dt>
 
           <code><a href="costDist.html">costDist(<i>&lt;SpatRaster&gt;</i>)</a></code>
@@ -357,7 +357,7 @@
         <dd>Cost-distance</dd>
       </dl><dl><dt>
 
-          <code><a href="cover.html">cover(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="cover.html">cover(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code>
+          <code><a href="cover.html">cover(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="cover.html">cover(<i>&lt;SpatRaster&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="cover.html">cover(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code>
 
         </dt>
         <dd>Replace values with values from another object</dd>
@@ -411,19 +411,19 @@
         <dd>Density plot</dd>
       </dl><dl><dt>
 
-          <code><a href="deprecated.html">area(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="deprecated.html">gridDistance(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="deprecated.html">gridDistance(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
         <dd>deprecated methods</dd>
       </dl><dl><dt>
 
-          <code><a href="depth.html">depth(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="depth.html">`depth&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="depth.html">depth(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="depth.html">`depth&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="depth.html">depthName(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="depth.html">`depthName&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="depth.html">depthUnit(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="depth.html">`depthUnit&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
         <dd>depth of SpatRaster layers</dd>
       </dl><dl><dt>
 
-          <code><a href="describe.html">describe(<i>&lt;character&gt;</i>)</a></code>
+          <code><a href="describe.html">describe(<i>&lt;character&gt;</i>)</a></code> <code><a href="describe.html">describe(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
         <dd>describe</dd>
@@ -453,10 +453,16 @@
         <dd>Disaggregate raster cells or vector geometries</dd>
       </dl><dl><dt>
 
-          <code><a href="distance.html">distance(<i>&lt;SpatRaster&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;SpatVector&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;matrix&gt;</i>,<i>&lt;matrix&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;matrix&gt;</i>,<i>&lt;missing&gt;</i>)</a></code>
+          <code><a href="distance.html">distance(<i>&lt;SpatRaster&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;SpatVector&gt;</i>,<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;SpatVector&gt;</i>,<i>&lt;ANY&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;matrix&gt;</i>,<i>&lt;matrix&gt;</i>)</a></code> <code><a href="distance.html">distance(<i>&lt;matrix&gt;</i>,<i>&lt;missing&gt;</i>)</a></code>
 
         </dt>
         <dd>Geographic distance</dd>
+      </dl><dl><dt>
+
+          <code><a href="divide.html">divide(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="divide.html">divide(<i>&lt;SpatVector&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Subdivide a raster or polygons</dd>
       </dl><dl><dt>
 
           <code><a href="dots.html">dots(<i>&lt;SpatVector&gt;</i>)</a></code>
@@ -519,7 +525,7 @@
         <dd>Extract values for a range of layers from a SpatRaster</dd>
       </dl><dl><dt>
 
-          <code><a href="factors.html">levels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">`levels&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">categories(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">droplevels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">addCats(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="factors.html">levels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">`levels&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">categories(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">droplevels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">simplifyLevels(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">addCats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="factors.html">combineLevels()</a></code>
 
         </dt>
         <dd>Categorical rasters</dd>
@@ -609,7 +615,7 @@
         <dd>Find gaps between polygons</dd>
       </dl><dl><dt>
 
-          <code><a href="gdal.html">gdal()</a></code> <code><a href="gdal.html">gdalCache()</a></code> <code><a href="gdal.html">setGDALconfig()</a></code> <code><a href="gdal.html">getGDALconfig()</a></code>
+          <code><a href="gdal.html">gdal()</a></code> <code><a href="gdal.html">gdalCache()</a></code> <code><a href="gdal.html">setGDALconfig()</a></code> <code><a href="gdal.html">getGDALconfig()</a></code> <code><a href="gdal.html">clearVSIcache()</a></code> <code><a href="gdal.html">libVersion()</a></code>
 
         </dt>
         <dd>GDAL version, supported file formats, and cache size</dd>
@@ -699,7 +705,7 @@
         <dd>Initialize a SpatRaster with values</dd>
       </dl><dl><dt>
 
-          <code><a href="inplace.html">set.names(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.names(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="inplace.html">set.names(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.ext(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.ext(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.crs(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.crs(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.values(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.RGB(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="inplace.html">set.names(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.names(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="inplace.html">set.names(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.ext(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.ext(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.crs(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.crs(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="inplace.html">set.values(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.values(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="inplace.html">set.cats(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="inplace.html">set.RGB(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
         <dd>Change values in-place</dd>
@@ -735,7 +741,7 @@
         <dd>Intersection</dd>
       </dl><dl><dt>
 
-          <code><a href="is.bool.html">is.bool(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.bool(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">is.int(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.int(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">is.factor(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.factor(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="is.bool.html">is.num(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">is.bool(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.bool(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">is.int(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.int(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">is.factor(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.bool.html">as.factor(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
         <dd>Raster value types</dd>
@@ -745,6 +751,12 @@
 
         </dt>
         <dd>Check if a SpatExtent or SpatVector is empty</dd>
+      </dl><dl><dt>
+
+          <code><a href="is.flipped.html">is.flipped(<i>&lt;SpatRaster&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Check for rotation</dd>
       </dl><dl><dt>
 
           <code><a href="is.lonlat.html">is.lonlat(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="is.lonlat.html">is.lonlat(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="is.lonlat.html">is.lonlat(<i>&lt;character&gt;</i>)</a></code>
@@ -867,7 +879,7 @@
         <dd>meta</dd>
       </dl><dl><dt>
 
-          <code><a href="metags.html">`metags&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="metags.html">metags(<i>&lt;SpatRaster&gt;</i>)</a></code>
+          <code><a href="metags.html">`metags&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="metags.html">metags(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="metags.html">`metags&lt;-`(<i>&lt;SpatRasterDataset&gt;</i>)</a></code> <code><a href="metags.html">metags(<i>&lt;SpatRasterDataset&gt;</i>)</a></code>
 
         </dt>
         <dd>Set or get metadata</dd>
@@ -927,6 +939,12 @@
         <dd>is not NA</dd>
       </dl><dl><dt>
 
+          <code><a href="nseg.html">nseg(<i>&lt;SpatVector&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Number of segments</dd>
+      </dl><dl><dt>
+
           <code><a href="origin.html">origin(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="origin.html">`origin&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
@@ -975,7 +993,7 @@
         <dd>Plot with leaflet</dd>
       </dl><dl><dt>
 
-          <code><a href="plot.html">plot(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatRaster&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatRaster&gt;</i>,<i>&lt;character&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVector&gt;</i>,<i>&lt;character&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVector&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVector&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVectorCollection&gt;</i>,<i>&lt;missing&gt;</i>)</a></code>
+          <code><a href="plot.html">plot(<i>&lt;SpatRaster&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatRaster&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatRaster&gt;</i>,<i>&lt;character&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVector&gt;</i>,<i>&lt;character&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVector&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVector&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVectorCollection&gt;</i>,<i>&lt;missing&gt;</i>)</a></code> <code><a href="plot.html">plot(<i>&lt;SpatVectorCollection&gt;</i>,<i>&lt;numeric&gt;</i>)</a></code>
 
         </dt>
         <dd>Make a map</dd>
@@ -1075,12 +1093,6 @@
 
         </dt>
         <dd>Combine row, column, and layer numbers</dd>
-      </dl><dl><dt>
-
-          <code><a href="readAll.html">readAll(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readAll.html">readAll(<i>&lt;SpatRasterDataset&gt;</i>)</a></code>
-
-        </dt>
-        <dd>Read all values into memory</dd>
       </dl><dl><dt>
 
           <code><a href="readwrite.html">readStart(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">readStop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">readValues(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">writeStart(<i>&lt;SpatRaster&gt;</i>,<i>&lt;character&gt;</i>)</a></code> <code><a href="readwrite.html">writeStop(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">writeValues(<i>&lt;SpatRaster&gt;</i>,<i>&lt;vector&gt;</i>)</a></code> <code><a href="readwrite.html">blocks(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="readwrite.html">fileBlocksize()</a></code>
@@ -1189,6 +1201,12 @@
 
         </dt>
         <dd>Scale values</dd>
+      </dl><dl><dt>
+
+          <code><a href="scale_linear.html">scale_linear(<i>&lt;SpatRaster&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Scale values linearly</dd>
       </dl><dl><dt>
 
           <code><a href="scatter.html">plot(<i>&lt;SpatRaster&gt;</i>,<i>&lt;SpatRaster&gt;</i>)</a></code>
@@ -1401,6 +1419,12 @@
         <dd>Add labels to a map</dd>
       </dl><dl><dt>
 
+          <code><a href="thresh.html">thresh(<i>&lt;SpatRaster&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Thresholding</dd>
+      </dl><dl><dt>
+
           <code><a href="time.html">has.time(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="time.html">time(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="time.html">`time&lt;-`(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="time.html">timeInfo(<i>&lt;SpatRaster&gt;</i>)</a></code>
 
         </dt>
@@ -1411,6 +1435,12 @@
 
         </dt>
         <dd>Temporary files</dd>
+      </dl><dl><dt>
+
+          <code><a href="toMemory.html">toMemory(<i>&lt;SpatRaster&gt;</i>)</a></code> <code><a href="toMemory.html">toMemory(<i>&lt;SpatRasterDataset&gt;</i>)</a></code>
+
+        </dt>
+        <dd>Read all cell values into memory</dd>
       </dl><dl><dt>
 
           <code><a href="topology.html">mergeLines(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="topology.html">snap(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="topology.html">removeDupNodes(<i>&lt;SpatVector&gt;</i>)</a></code> <code><a href="topology.html">makeNodes(<i>&lt;SpatVector&gt;</i>)</a></code>
@@ -1491,7 +1521,7 @@
         <dd>Voronoi diagram and Delaunay triangles</dd>
       </dl><dl><dt>
 
-          <code><a href="vrt.html">vrt(<i>&lt;character&gt;</i>)</a></code>
+          <code><a href="vrt.html">vrt(<i>&lt;character&gt;</i>)</a></code> <code><a href="vrt.html">vrt(<i>&lt;SpatRasterCollection&gt;</i>)</a></code>
 
         </dt>
         <dd>Virtual Raster Dataset</dd>

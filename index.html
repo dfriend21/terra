@@ -23,7 +23,7 @@
 
     <a class="navbar-brand me-2" href="index.html">terra</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.8-44</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@
 </h1>
 </div>
 <p align="right" style="font-size:11px">logo by Zane Dax</p>
-<p><a href="https://github.com/rspatial/terra/actions/workflows/rcmdcheck.yml" class="external-link"><img src="https://github.com/rspatial/terra/actions/workflows/rcmdcheck.yml/badge.svg" alt="rcmdcheck"></a> <a href="https://cran.r-project.org/package=terra" class="external-link"><img src="https://www.r-pkg.org/badges/version/terra" alt="CRAN status"></a> <a href="https://www.r-pkg.org/pkg/terra" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/terra" alt="CRAN RStudio mirror downloads"></a></p>
+<p><a href="https://github.com/rspatial/terra/actions/workflows/rcmdcheck.yml" class="external-link"><img src="https://github.com/rspatial/terra/actions/workflows/rcmdcheck.yml/badge.svg" alt="rcmdcheck"></a> <a href="https://cran.r-project.org/package=terra" class="external-link"><img src="https://www.r-pkg.org/badges/version/terra" alt="CRAN status"></a> <a href="https://www.r-pkg.org/pkg/terra" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/terra" alt="CRAN RStudio mirror downloads"></a> <a href="https://stackoverflow.com/questions/tagged/terra" class="external-link"><img src="https://img.shields.io/stackexchange/stackoverflow/t/terra?logo=stackoverflow&amp;label=Questions" alt="StackOverflow"></a></p>
 <p><code>terra</code> is an <em>R</em> package for spatial data analysis. There are tutorials at <a href="https://rspatial.org/index.html" class="external-link">rspatial.org</a>.</p>
 <p><a href="https://stackoverflow.com/questions/tagged/terra" class="external-link">Stack Overflow</a> is a good place to ask questions if you get stuck. Make sure to include a <a href="https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example" class="external-link">simple reproducible example</a>. But if you think you have found a bug, or if you want to request a new feature, please file an <a href="https://github.com/rspatial/terra/issues" class="external-link">issue</a>.</p>
 <p><code>terra</code> replaces the <a href="https://github.com/rspatial/raster" class="external-link">raster</a> package. The interfaces of <code>terra</code> and <code>raster</code> are similar, but <code>terra</code> is simpler, faster and can do more.</p>
@@ -74,10 +74,9 @@
 <div class="section level4">
 <h4 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a>
 </h4>
-<p>On Windows, you need to first install <a href="https://cran.r-project.org/bin/windows/Rtools/" class="external-link">Rtools</a> to get a C++ compiler that R can use. You need a recent version of Rtools42 (rtools42-5355-5357).</p>
-<p>Then, in R, install the package.</p>
-<pre><code><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span><span class="st">"R_REMOTES_NO_ERRORS_FROM_WARNINGS"</span> <span class="op">=</span> <span class="st">"true"</span><span class="op">)</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></span></code></pre>
+<p>On Windows, you need to first install <a href="https://cran.r-project.org/bin/windows/Rtools/" class="external-link">Rtools</a> to get, among other things, a C++ compiler that <em>R</em> can use. You need the current versions of <em>R</em> and <em>RTools</em>.</p>
+<p>Then, in <em>R</em>, install terra with:</p>
+<pre><code><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="section level4">
 <h4 id="macos">macOS<a class="anchor" aria-label="anchor" href="#macos"></a>
@@ -85,11 +84,11 @@
 <p>On macOS, you can use <a href="https://www.macports.org/" class="external-link">MacPorts</a> or <a href="https://brew.sh/" class="external-link">Homebrew</a>.</p>
 <p>With MacPorts you can do</p>
 <pre><code>sudo port install R-terra</code></pre>
-<p>With Homebrew, you need to first install GDAL:</p>
+<p>With Homebrew, you need to first install GDAL and PROJ:</p>
 <pre><code>brew install pkg-config
-brew install gdal</code></pre>
+brew install gdal proj</code></pre>
 <p>Followed by (note the additional configuration argument needed for Homebrew)</p>
-<pre><code><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span>, configure.args <span class="op">=</span> <span class="st">"--with-proj-lib=$(brew --prefix)/lib/"</span><span class="op">)</span></span></code></pre>
+<pre><code><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rspatial/terra"</span>, configure.args <span class="op">=</span> <span class="st">"--with-proj-lib=$(brew --prefix)/lib/"</span><span class="op">)</span></span></code></pre>
 <p>To install the CRAN version from source you would do</p>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"terra"</span>, type <span class="op">=</span> <span class="st">"source"</span>, configure.args <span class="op">=</span> <span class="st">"--with-proj-lib=$(brew --prefix)/lib/"</span><span class="op">)</span></span></code></pre>
 </div>
@@ -98,12 +97,12 @@ brew install gdal</code></pre>
 </h4>
 <p>The <em>easy</em> way to install terra on Ubuntu is with <a href="https://eddelbuettel.github.io/r2u/" class="external-link">r2u</a>.</p>
 <p>The harder way:</p>
-<p>Install the system requirements GDAL (&gt;= 2.2.3), GEOS (&gt;= 3.4.0), PROJ (&gt;= 4.9.3), sqlite3.</p>
+<p>Install the system requirements GDAL (&gt;= 2.2.3), GEOS (&gt;= 3.4.0), PROJ (&gt;= 4.9.3), netcdf (&gt;=4.1.3), sqlite3, tbb</p>
 <pre><code>sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
 sudo apt-get update
-sudo apt-get install libgdal-dev libgeos-dev libproj-dev </code></pre>
+sudo apt-get install libgdal-dev libgeos-dev libproj-dev libtbb-dev libnetcdf-dev</code></pre>
 <p>And now, in R, install the package</p>
-<pre><code><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></span></code></pre>
+<pre><code><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"rspatial/terra"</span><span class="op">)</span></span></code></pre>
 <p>See the <code>sf</code> <a href="https://github.com/r-spatial/sf" class="external-link">instructions</a> for installation on other linux systems — and for possible updates/improvements on the above instructions.</p>
 </div>
 </div>
